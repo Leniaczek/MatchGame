@@ -4,9 +4,9 @@
     <Style x:Key="TextBoxStyle" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontSize" Value="45"/>
         <Setter Property="Text" Value="?"/>
-
+        <Setter Property="Background" Value="AliceBlue"/>
     </Style> 
     
 </ResourceDictionary>

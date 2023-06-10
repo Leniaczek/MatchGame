@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchGame"
         mc:Ignorable="d"
-        Title="Dopasuj wszystkie zwierzątka!" Height="450" Width="400">
+        Title="Dopasuj wszystkie zwierzątka!" Height="450" Width="400" Background="GhostWhite">
 
-    <!--<Window.Resources>
+    <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="MainWindowDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-    </Window.Resources>-->
+    </Window.Resources>
     
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="mainGrid" Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -29,21 +29,24 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" FontSize ="36" Text="?"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Grid.Column="0" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Grid.Column="1" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="2" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="2" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="2" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Grid.Column="2" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="3" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="3" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="3" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Grid.Column="3" FontSize ="36" Text="?"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextBoxStyle}" MouseDown="TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="0" Grid.Column="3" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="2" Grid.Column="3" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <TextBlock Grid.Row="3" Grid.Column="3" Style="{StaticResource TextBoxStyle}" MouseDown = "TextBlock_MouseDown"/>
+        <Border Grid.Row="4" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="2" CornerRadius="8,8,8,8" Background="GhostWhite">
+            <TextBlock x:Name="timeTextBlock"  Background="GhostWhite" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36px" Text="Time: " MouseDown="timeTextBlock_MouseDown"/>
+        </Border>
     </Grid>
 </Window>
